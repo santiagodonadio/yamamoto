@@ -4,5 +4,5 @@
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);    
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
