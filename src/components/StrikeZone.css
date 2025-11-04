@@ -1,0 +1,28 @@
+.centerr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+}
+
+.strikezone {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+}
+
+
+.box {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
