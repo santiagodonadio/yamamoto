@@ -5,7 +5,7 @@ function Pitches() {
     return (
 
         <div className='centerCalls'>
-            <button onClick={alert}>4 Seam Fastball</button>
+            <button onClick={alert}>Fastball</button>
             <button>Spliter</button>
             <button>Curveball</button>
             <button>Cutter</button>
