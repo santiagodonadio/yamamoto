@@ -5,6 +5,19 @@ function StrikeZone(){
     return (
 
         <div className='centerr'>
+
+            <div className='options'>
+                <button onClick={alert}>4 Seam Fastball</button>
+                <button>Spliter</button>
+                <button>Curveball</button>
+                <button>Cutter</button>
+                <button>Slider</button>
+                <button>Sinker</button>
+            </div>
+
+            
+            
+
             <div className="strikezone">
                 <div className='box'>1</div>
                 <div className='box'>2</div>
@@ -16,6 +29,7 @@ function StrikeZone(){
                 <div className='box'>8</div>
                 <div className='box'>9</div>
             </div>
+            
 
         </div>
         
