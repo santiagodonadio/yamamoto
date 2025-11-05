@@ -1,0 +1,8 @@
+.app-background {
+    background-image: url('yamamotoTrophy.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+
+}

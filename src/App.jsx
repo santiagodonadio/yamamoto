@@ -97,12 +97,17 @@ function App() {
     return (
         <>
         <Header/>
+        <div className='app-background'>
 
-        <Pitches selectedPitch={selectedPitch} setSelectedPitch={setSelectedPitch}/>
+            <Pitches selectedPitch={selectedPitch} setSelectedPitch={setSelectedPitch}/>
 
-        <StrikeZone selectedZone={selectedZone} setSelectedZone={setSelectedZone}/>
+            <StrikeZone selectedZone={selectedZone} setSelectedZone={setSelectedZone}/>
 
-        <Swing handleSwing={handleSwing} result={result}/>
+            <Swing handleSwing={handleSwing} result={result}/>
+            
+        </div>
+
+
 
         <Footer/>
         </>
