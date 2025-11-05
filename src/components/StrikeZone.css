@@ -5,4 +5,14 @@
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);    
     padding-bottom: 40px;
+    
+}
+
+.strikezone button{
+    font-size: 24px;
+}
+
+.strikezone button.selected {
+    background-color: aqua;
+    color: black;
 }
