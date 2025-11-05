@@ -17,3 +17,8 @@ button:hover {
     background-color: aliceblue;
     transform: scale(1.05);
 }
+
+.centerCalls button.selected {
+    background-color: aqua;
+    color: black;
+}

@@ -1,19 +1,28 @@
 import './Pitches.css'
 
-function Pitches() {
+export default function Pitches({selectedPitch, setSelectedPitch}) {
+
+    const pitches = ["Fastball", "Splitter", "Curveball", "Cutter", "Slider", "Sinker"]
 
     return (
 
         <div className='centerCalls'>
-            <button onClick={alert}>Fastball</button>
-            <button>Spliter</button>
-            <button>Curveball</button>
-            <button>Cutter</button>
-            <button>Slider</button>
-            <button>Sinker</button>
+
+            {pitches.map((pitch) => (
+                <button
+                    key={pitch}
+                    onClick={() => setSelectedPitch(pitch)}
+                    className={selectedPitch === pitch ? "selected" : ""}
+                >
+                    {pitch}
+                </button>
+            ))}
+
+
+            
+
+
         </div>
 
     )
 }
-
-export default Pitches
