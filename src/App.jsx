@@ -36,21 +36,37 @@ function App() {
         }
     }
 
+    const [totalSwings, setTotalSwings] = useState(0)
+    const [hits, setHits] = useState(0);
+
     function handleSwing(){
         if(!selectedPitch || !selectedZone){
-            setResult("Chooose a pitch and zone before swinging");
+            setResult("Chooose a Pitch and Zone before swinging");
+            return;
         }
 
         const randomPitch = getRandomPitch();
         const randomZone = zones[Math.floor(Math.random() * zones.length)];
 
+        setTotalSwings(prev => prev + 1);
+
         if(selectedPitch === randomPitch && selectedZone === randomZone){
+            setHits(prev => prev + 1);
             setResult(
                 <>
 
                 HIT!! <br/><br/>You hit a {randomPitch} in Zone {randomZone}.
                 <br/><br/>
                 Congratulations!!
+                <br/>
+
+                _________________
+
+                <br/><br/>
+
+                Total Hits: {hits + 1} <br/>
+                Total Swings: {totalSwings + 1}<br/>
+                Average: {((hits + 1) / (totalSwings + 1)).toFixed(3).slice(1)}%
                 
                 </>
             );
@@ -60,10 +76,22 @@ function App() {
             Swing and a miss.<br/> 
             <br/>You swung at a {selectedPitch} in Zone {selectedZone}, <br/> 
             but it was a {randomPitch} in Zone {randomZone}.
+            <br/>
+
+            _________________
+
+            <br/><br/>
+
+
+            Total Hits: {hits} <br/>
+                Total Swings: {totalSwings + 1}<br/>
+                Average: {((hits) / (totalSwings + 1)).toFixed(3).slice(1)}%
             
             </>
             );
         }
+
+    
     }
 
     return (
