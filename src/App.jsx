@@ -45,11 +45,24 @@ function App() {
         const randomZone = zones[Math.floor(Math.random() * zones.length)];
 
         if(selectedPitch === randomPitch && selectedZone === randomZone){
-            setResult(`Hit! ${randomPitch} in zone ${randomZone}.`);
+            setResult(
+                <>
+
+                HIT!! <br/><br/>You hit a {randomPitch} in Zone {randomZone}.
+                <br/><br/>
+                Congratulations!!
+                
+                </>
+            );
         } else {
-            setResult(`Swing and a miss.,\n 
-            You swung at a ${selectedPitch} in zone ${selectedZone}, \n
-            but it was a ${randomPitch} in zone ${randomZone}.`);
+            setResult(
+            <>
+            Swing and a miss.<br/> 
+            <br/>You swung at a {selectedPitch} in Zone {selectedZone}, <br/> 
+            but it was a {randomPitch} in Zone {randomZone}.
+            
+            </>
+            );
         }
     }
 

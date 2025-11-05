@@ -1,11 +1,13 @@
 import './Swing.css'
 
-function Swing() {
+export default function Swing({handleSwing, result}) {
 
     return (
 
         <div className='swing-content'>
-            <button className="swing-button">Swing</button>
+            <button onClick={handleSwing}>Swing</button>
+
+            {result && <h3 className='result'>{result}</h3>}
 
         </div>
 
@@ -14,5 +16,3 @@ function Swing() {
 
     );
 }
-
-export default Swing

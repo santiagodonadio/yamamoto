@@ -11,7 +11,7 @@ export default function StrikeZone({selectedZone, setSelectedZone}){
             {zones.map((zone) => (
                 <button
                     key={zone}
-                    onClick={() => setSelectedZone(zone)}
+                    onClick={() => setSelectedZone(selectedZone === zone ? null: zone)}
                     className={selectedZone === zone ? "selected": ""}
                 >
                     {zone}

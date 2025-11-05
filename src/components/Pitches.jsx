@@ -11,7 +11,7 @@ export default function Pitches({selectedPitch, setSelectedPitch}) {
             {pitches.map((pitch) => (
                 <button
                     key={pitch}
-                    onClick={() => setSelectedPitch(pitch)}
+                    onClick={() => setSelectedPitch(selectedPitch === pitch ? null: pitch)}
                     className={selectedPitch === pitch ? "selected" : ""}
                 >
                     {pitch}

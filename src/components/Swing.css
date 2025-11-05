@@ -1,18 +1,21 @@
 .swing-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 40px;
+    padding: 15px;
+    font-size: 20px;
+    gap: 10px;
 }
 
-.swing-button {
-    background-color: white;
-    color: black;
-    padding: 20px;
-
+.swing-content button {
+    font-size: 18px;
+    width: 100px;
+    max-width: 60%;
 }
 
-.swing-button:hover {
+.swing-content button:hover {
     background-color: aliceblue;;
     transform: scale(1.05);
 }
